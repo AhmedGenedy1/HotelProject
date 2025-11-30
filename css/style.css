@@ -47,6 +47,7 @@ header {
   transition: var(--main-trtransition) ease;
   background-color: transparent;
 }
+
 header .navbar-brand {
   font-size: 35px;
   font-weight: bold;
@@ -55,7 +56,6 @@ header .navbar-brand {
 header .navbar-nav .nav-link {
   font-size: 20px;
   color: white;
-  padding: 0 20px;
   position: relative;
   transition: var(--main-trtransition) ease;
 }
@@ -89,6 +89,14 @@ header .navbar-nav .active::before {
   height: 3px;
   background-color: white;
 }
+header .container-fluid .navbar-toggler {
+  font-size: 35px;
+}
+header .container-fluid .navbar-toggler:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 header.shrink {
   background-color: white;
   height: fit-content;
@@ -97,7 +105,8 @@ header.shrink {
   transition: var(--main-trtransition) ease;
 }
 header.shrink .nav-link,
-header.shrink .navbar-brand {
+header.shrink .navbar-brand,
+header.shrink .navbar-toggler {
   color: black !important;
 }
 /* End Header */
@@ -130,7 +139,7 @@ header.shrink .navbar-brand {
   text-align: center;
 }
 .landing .container .text p {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 10px;
   font-family: "Roboto";
   font-weight: normal;
@@ -140,6 +149,11 @@ header.shrink .navbar-brand {
   font-size: 80px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+@media (max-width: 776px) {
+  .landing .container .text h1 {
+    font-size: 50px;
+  }
 }
 /* End landing */
 /* Start Welcome */
@@ -167,23 +181,31 @@ header.shrink .navbar-brand {
   color: #ffba5a;
   letter-spacing: 2px;
 }
-.welcome .col {
-  margin-left: 55px;
-}
 .welcome .image {
   max-width: 650px;
   position: relative;
+  margin-top: 50px;
 }
 .welcome .imgone {
   overflow: hidden;
   position: absolute;
-  width: 250px;
+  width: 200px;
   right: -65px;
   bottom: -80px;
   border-radius: 50%;
   border: 10px solid #f2f4fb;
 }
+@media (max-width: 776px) {
+  .welcome .imgone {
+    width: 170px;
+    right: -10px;
+    bottom: -50px;
+  }
+}
 .welcome .imgtwo {
   max-width: 100%;
 }
 /* End Main */
+
+/* Satrt Footer */
+/* End Footer */
